@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital & Appointment Management</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <a href=""><h1>City Hospital</h1></a>
+    <nav>
+      <a href="#find-doctor">Find Doctor</a>
+      <a href="#book-appointment">Book Appointment</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to City Hospital</h2>
+    <p>Your health, our priority. Book appointments with trusted doctors today!</p>
+    <button onclick="scrollToSection('find-doctor')">Find a Doctor</button>
+  </section>
+
+  <section id="find-doctor" class="section">
+    <h3>🔎 Search for Doctors</h3>
+    <form id="searchForm">
+      <label>Specialization:
+        <input type="text" id="specialization" placeholder="e.g. Cardiology" />
+      </label>
+      <label>Hospital:
+        <input type="text" id="hospital" placeholder="e.g. City Hospital" />
+      </label>
+      <button type="submit">Search</button>
+    </form>
+    <div id="results"></div>
+  </section>
+
+  <section id="book-appointment" class="section">
+    <h3>📅 Book an Appointment</h3>
+    <form id="appointmentForm" class="appintForm">
+      <label>Patient Name:
+        <input type="text" id="patientName" placeholder="Enter Patient Name" required />
+      </label>
+      <label>Doctor Name:
+        <input type="text" id="doctorName" placeholder="Enter Doctor Name" required />
+      </label>
+      <label>Date:
+        <input type="date" id="appointmentDate" required />
+      </label>
+      <label>Time:
+        <input type="time" id="appointmentTime" required />
+      </label>
+      <button type="submit">Book Now</button>
+    </form>
+    <div id="confirmation"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 City Hospital. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
